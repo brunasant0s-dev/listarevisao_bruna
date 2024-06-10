@@ -1,0 +1,76 @@
+<!-- Bruna Cecília Vitório dos Santos -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 7</title>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        background-color: #0000ff; 
+        color: white;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropbtn:hover{
+        background-color: #0000ff;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<div class="dropdown">
+    <button onclick="toggleDropdown()" class="dropbtn">Menu</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="#">Item 1</a>
+        <a href="#">Item 2</a>
+        <a href="#">Item 3</a>
+    </div>
+</div>
+
+<script>
+function toggleDropdown() {
+    var dropdown = document.getElementById("myDropdown");
+    if (dropdown.style.display === "none") {
+        dropdown.style.display = "block";
+    } else {
+        dropdown.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!-- Bruna Cecília Vitório dos Santos -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Palavras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 400px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      border: 2px solid #3498db;
+      border-radius: 5px;
+      resize: none;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    textarea:focus {
+      border-color: #2980b9;
+      outline: none;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    #wordCount {
+      font-weight: bold;
+      color: #3498db;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <textarea id="textInput" placeholder="Digite aqui..."></textarea>
+    <p>Número de palavras digitadas: <span id="wordCount">0</span></p>
+  </div>
+
+  <script>
+    document.getElementById('textInput').addEventListener('input', function() {
+      const text = this.value.trim();
+      const wordCount = text ? text.split(/\s+/).length : 0;
+      document.getElementById('wordCount').textContent = wordCount;
+    });
+  </script>
+</body>
+</html>

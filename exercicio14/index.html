@@ -1,0 +1,67 @@
+<!-- Bruna Cecília Vitório dos Santos -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens com Filtro</title>
+    <link rel="stylesheet" href="14.css">
+</head>
+<body>
+    <div class="filter-buttons">
+        <button onclick="filterGallery('all')">Todos</button>
+        <button onclick="filterGallery('nature')">Natureza</button>
+        <button onclick="filterGallery('city')">Cidade</button>
+        <button onclick="filterGallery('animals')">Animais</button>
+    </div>
+    <div class="gallery">
+        <div class="gallery-item nature">
+            <img src="https://veja.abril.com.br/wp-content/uploads/2016/09/fernando-de-noronha.jpg?quality=90&strip=info&w=720&h=440&crop=1" alt="Natureza 1">
+        </div>
+        <div class="gallery-item city">
+            <img src="https://lh3.googleusercontent.com/3kyLcTPKjUJ4k1Rl4Lae1gAsoAuUikixESH4uX1d18Rubj54ivd-h4APW3NVshe8b2AHnzi54Ozq4Lh0gmZPQP70es_eok4q6skv5ZhcYmxYHAC264G4KXlHxvLzRmX9U2QPWxRy" alt="Cidade 1">
+        </div>
+        <div class="gallery-item animals">
+            <img src="https://mediatalks.uol.com.br/wp-content/uploads/2023/12/Sapo-flores-Wikicommons-fotografia-de-natureza-e1673630178143.jpg" alt="Animais 1">
+        </div>
+        <div class="gallery-item nature">
+            <img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2017/06/foz-do-iguacu-cataratas-e1526566331277.jpg" alt="Natureza 2">
+        </div>
+        <div class="gallery-item city">
+            <img src="https://sundaycooks.com/wp-content/uploads/2020/03/Como-visitar-a-Torre-Eiffel-de-Paris-na-Fran%C3%A7a-11-1200x675.jpg" alt="Cidade 2">
+        </div>
+        <div class="gallery-item animals">
+            <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2024/02/29/1213799964-leao-leoa.jpg" alt="Animais 2">
+        </div>
+        <div class="gallery-item nature">
+            <img src="https://origoenergia.com.br/blog/wp-content/uploads/2021/10/Dia-da-natureza-atitudes-para-realmente-fazer-a-diferenc%CC%A7a-scaled-1.jpg" alt="Natureza 3">
+        </div>
+        <div class="gallery-item city">
+            <img src="https://www.otempo.com.br/content/dam/otempo/editorias/turismo/2023/4/turismo-as-cidades-mais-bonitas-do-mundo-rio-de-janeiro-entre-as-mais-bonitas-do-mundo-quais-sao-as-cidades-mais-bonitas-do-mundo-1708446377.jpeg" alt="Cidade 3">
+        </div>
+        <div class="gallery-item animals">
+            <img src="https://www.petz.com.br/blog/wp-content/uploads/2022/06/animais-selvagens-3.jpg" alt="Animais 3">
+        </div>
+    </div>
+    <script>
+        function filterGallery(category) {
+            let items = document.querySelectorAll('.gallery-item');
+            if (category === 'all') {
+                items.forEach(item => {
+                    item.classList.add('show');
+                });
+            } else {
+                items.forEach(item => {
+                    if (item.classList.contains(category)) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+            }
+        }
+
+        filterGallery('all');
+    </script>
+</body>
+</html>
